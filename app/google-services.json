@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "242643054219",
+    "firebase_url": "https://socialblike.firebaseio.com",
+    "project_id": "socialblike",
+    "storage_bucket": "socialblike.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242643054219:android:9c4527b3b7b420e1",
+        "android_client_info": {
+          "package_name": "com.example.gerard.socialapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242643054219-or44gm26g3m85tv68pooha7tp1nc60ck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gerard.socialapp",
+            "certificate_hash": "62de55b509511b939b3972eb7ce8ef235ecdaa16"
+          }
+        },
+        {
+          "client_id": "242643054219-2ov2kq23hnd4362l7nmk35bnj8tvpsrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIGHCLSCrRf7bnc8pSq8o6v-uKj80EFOY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242643054219-2ov2kq23hnd4362l7nmk35bnj8tvpsrp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
