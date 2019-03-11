@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,9 @@ public class PostsFragment extends Fragment {
                         startActivity(intent);
                     }
                 });
+
+                viewHolder.time.setText(DateUtils.getRelativeTimeSpanString(post.time,
+                        System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS));
 
                 //para hacer zoom
                 Zoomy.Builder builder = new Zoomy.Builder(getActivity()).target(viewHolder.image);

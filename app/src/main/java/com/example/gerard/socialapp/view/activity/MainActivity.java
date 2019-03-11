@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             user.email = firebaseUser.getEmail();
 
             FirebaseDatabase.getInstance().getReference().child("users").child(firebaseUser.getUid()).setValue(user);
+            //FirebaseDatabase.getInstance().getReference().child("prueba").child(firebaseUser.getUid()).setValue()
 
             startActivity(new Intent(this, PostsActivity.class));
             finish();

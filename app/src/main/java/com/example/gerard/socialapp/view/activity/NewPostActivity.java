@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
 
@@ -205,6 +206,7 @@ public class NewPostActivity extends AppCompatActivity {
     private void writeNewPost(String postText, String mediaUrl) {
         String postKey = mReference.push().getKey();
 
+        //ServerValue.TIMESTAMP
         Post post = new Post(mUser.getUid(), mUser.getDisplayName(), mUser.getPhotoUrl().toString(), postText, mediaUrl, mediaType);
         Map<String, Object> postValues = post.toMap();
 
@@ -212,6 +214,7 @@ public class NewPostActivity extends AppCompatActivity {
         childUpdates.put("posts/data/" + postKey, postValues);
         childUpdates.put("posts/all-posts/" + postKey, true);
         childUpdates.put("posts/user-posts/" + mUser.getUid() + "/" + postKey, true);
+        //childUpdates.put("posts/time/"+postKey,true);
 
         mReference.updateChildren(childUpdates).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
